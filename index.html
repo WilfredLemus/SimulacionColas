@@ -36,20 +36,32 @@
         <div id="navbar" class="navbar-collapse collapse">
             <div class="navbar-left">
             </div>
-          <div class="navbar-form navbar-right" >
-          <div class="form-group">
-            <label for="sel1">Tiempo de Simulacion:</label>
-            <select class="form-control" id="Ntiempo">
-              <option value="15">1 Hora</option>
-              <option value="30">2 Horas</option>
-              <option value="45">3 Horas</option>
-              <option value="60">4 Horas</option>
-            </select>
+          <div id="barpro" hidden class="nav navbar-text progress" style="width: 450px; margin-top:15px; margin-left:11em;margin-bottom: 0;">
+              <div class="bar progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+              <span class="sr-only">40% Complete (success)</span>
+            </div>
           </div>
-            <!-- <div class="form-group">
-              <input id="Nclient" type="number" placeholder="Numero de Clientes" class="form-control" data-placement="left" data-toggle="popover" title="Numero de Clientes" data-content="Ingresa un numero valido!. Debe ser mayor a 1.">
-            </div> -->
-            <button id="empezar" type="button" class="btn btn-primary">Empezar</button>
+          <!-- <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+              <span class="sr-only">40% Complete (success)</span>
+            </div>
+          </div> -->
+
+
+          <div class="navbar-form navbar-right" >
+            <div class="form-group">
+              <label for="sel1">Tiempo de Simulacion:</label>
+              <select class="form-control" id="Ntiempo">
+                <option value="15">1 Hora</option>
+                <option value="30">2 Horas</option>
+                <option value="45">3 Horas</option>
+                <option value="60">4 Horas</option>
+              </select>
+            </div>
+              <!-- <div class="form-group">
+                <input id="Nclient" type="number" placeholder="Numero de Clientes" class="form-control" data-placement="left" data-toggle="popover" title="Numero de Clientes" data-content="Ingresa un numero valido!. Debe ser mayor a 1.">
+              </div> -->
+              <button id="empezar" type="button" class="btn btn-primary">Empezar</button>
         </div>
         </div><!--/.navbar-collapse -->
       </div>
@@ -72,39 +84,77 @@
                 </div>
                 <div>
                     <h2>
-                        <!-- <span class="label label-default" style="margin-left:8%">Inactivo</span> -->
+                        <!-- <span class="label label-default" style="margin-left:8%">Inactivo</span>-->
                         <span class="label label-success" style="margin-left:4%">Ocupado</span>
                     </h2>
                 </div>
             </div>
           </div>
-
-        <!-- <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
-
       </div>
     </div>
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>Cliente <br>No.</th>
-                    <th>Tiempo LLegada</th>
-                    <th>Hora LLegada</th>
-                    <th>Hora Inicio <br>Servicio</th>
-                    <th>Tiempo Servicio</th>
-                    <th>Hora Fin Servicio</th>
-                    <th>Tiempo Espera</th>
-                    <th>Tiempo Servidor <br>Inactivo</th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-            </tbody>
-        </table>
+        <div class="col-md-8">
+          <table class="table table-hover">
+              <thead>
+                  <tr>
+                      <th>Cliente <br>No.</th>
+                      <th>Tiempo LLegada</th>
+                      <th>Hora LLegada</th>
+                      <th>Hora Inicio <br>Servicio</th>
+                      <th>Tiempo Servicio</th>
+                      <th>Hora Fin Servicio</th>
+                      <th>Tiempo Espera</th>
+                      <th>Tiempo en Cola</th>
+                      <th>Tiempo Servidor <br>Inactivo</th>
+                  </tr>
+              </thead>
+              <tbody id="table-body">
+              </tbody>
+          </table>
+        </div>
+        <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Modelo M/M/1</div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="badge" id="P"></span>
+                P = 
+              </li>
+              <li class="list-group-item">
+                <span class="badge" id="PO"></span>
+                Po = 
+              </li>
+              <li class="list-group-item">
+                <span class="badge" id="LS"></span>
+                LS = 
+              </li>
+              <li class="list-group-item">
+                <span class="badge" id="WS"></span>
+                WS =
+              </li>
+              <li class="list-group-item">
+                <span class="badge" id="LQ"></span>
+                LQ =
+              </li>
+              <li class="list-group-item">
+                <span class="badge" id="WQ"></span>
+                WQ =
+              </li>
+              <li class="list-group-item">
+                <span class="badge" id="PN"></span>
+                P3 =
+              </li>
+            </ul>
+          </div>
+        </div>
+          <!-- Factor de Utilizacion P= -->
+
+
+        </div>
 
         <!-- <div class="col-md-4">
           <h2>Heading</h2>
